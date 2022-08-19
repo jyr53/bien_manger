@@ -10,5 +10,18 @@ class RecipeController extends CrudControler_1.CrudController {
     show(req, res) {
         recipe_1.recettes.findAll({ 'where': { id: req.params.id } }).then(recipes => res.json(recipes));
     }
+    create(req, res) {
+        recipe_1.recettes.create(req.body).then(recipes => res.json(recipes));
+        console.log(req.body);
+        res.json("ok");
+    }
+    update(req, res) {
+        recipe_1.recettes.update(req.body, { 'where': { id: req.params.id } }).then(recipes => res.json(recipes));
+        res.json("ok");
+    }
+    delete(req, res) {
+        recipe_1.recettes.destroy({ 'where': { id: req.params.id } });
+        res.json("c'est fait");
+    }
 }
 exports.RecipeController = RecipeController;

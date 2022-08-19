@@ -1,53 +1,46 @@
 import { Model, DataTypes } from 'sequelize';
 import { sequelize } from "../config/database";
 
-export class recettes extends Model {
+export class utilisateur extends Model {
     public id!: number;
-    public Name!: string;
-    public Slug!: string;
-    public description!: string;
-    public guest!: number;
-    public utilisateur_id!: number;
+    public name!: string;
+    public email!: string;
+    public pasword!: string;
     public created_at!: Date;
     public updated_at!: Date;
-    public plat_id!: number;
-    public saison_id!: number;
+    public permission_id!: number;
+
 }
-recettes.init({
+utilisateur.init({
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
     },
-    Name: {
+    name: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
     },
-    Slug: {
+    email: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
+        validate:
+            { isEmail: true },
     },
-    description: {
+
+    password: {
         type: DataTypes.STRING,
-        allowNull: true,
-    },
-    guest: {
-        type: DataTypes.INTEGER,
-    },
-    utilisateur_id: {
-        type: DataTypes.INTEGER,
         allowNull: false,
+        unique: true
+
     },
-    plat_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-    saison_id: {
+    permission_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
     }
+
 },
     {
         sequelize,

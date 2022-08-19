@@ -1,28 +1,27 @@
-
 import { Request, Response } from "express";
 import { CrudController } from "./CrudControler";
-import { recettes } from "../models/recipe";
+import { utilisateur } from "../models/utilisateur";
 
-export class RecipeController extends CrudController {
+export class UtilisateurController extends CrudController {
 
     public read(req: Request, res: Response): void {
-        recettes.findAll().then(recipes => res.json(recipes));
+        utilisateur.findAll().then(user => res.json(user));
     }
     public show(req: Request, res: Response): void {
-        recettes.findAll({ 'where': { id: req.params.id } }).then(recipes => res.json(recipes));
+        utilisateur.findAll({ 'where': { id: req.params.id } }).then(user => res.json(user));
     }
     public create(req: Request, res: Response): void {
-        recettes.create(req.body).then(recipes => res.json(recipes));
+        utilisateur.create(req.body).then(user => res.json(user));
         console.log(req.body);
         res.json("ok");
     }
     public update(req: Request, res: Response): void {
-        recettes.update(req.body, { 'where': { id: req.params.id } }).then(recipes => res.json(recipes));
+        utilisateur.update(req.body, { 'where': { id: req.params.id } }).then(user => res.json(user));
         res.json("ok");
 
     }
     public delete(req: Request, res: Response): void {
-        recettes.destroy({ 'where': { id: req.params.id } });
+        utilisateur.destroy({ 'where': { id: req.params.id } });
         res.json("c'est fait");
     }
 }
