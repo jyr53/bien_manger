@@ -3,9 +3,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.RecipeController = void 0;
 const CrudControler_1 = require("./CrudControler");
 const recipe_1 = require("../models/recipe");
+const saisons_1 = require("../models/saisons");
 class RecipeController extends CrudControler_1.CrudController {
     read(req, res) {
-        recipe_1.recettes.findAll().then(recipes => res.json(recipes));
+        let essaie1 = [saisons_1.saisons.findAll().then(saison => res.json(saison))];
+        let recette = [recipe_1.recettes.findAll().then(recipes => res.json(recipes))];
     }
     show(req, res) {
         recipe_1.recettes.findAll({ 'where': { id: req.params.id } }).then(recipes => res.json(recipes));

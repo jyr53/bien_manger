@@ -13,6 +13,7 @@ const alowedOrigins = ['http://localhost:4000'];
 const options = {
     origin: alowedOrigins
 };
+//app.use(path,(req,res,next));
 app.use(express_1.default.json());
 //app.use('/static',express.static(join))
 app.get("/", (req, res) => res.send("hello world salut bande de nase"));
