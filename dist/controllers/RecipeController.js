@@ -5,9 +5,11 @@ const CrudControler_1 = require("./CrudControler");
 const recipe_1 = require("../models/recipe");
 const saisons_1 = require("../models/saisons");
 class RecipeController extends CrudControler_1.CrudController {
-    read(req, res) {
-        let essaie1 = [saisons_1.saisons.findAll().then(saison => res.json(saison))];
-        let recette = [recipe_1.recettes.findAll().then(recipes => res.json(recipes))];
+    async read(req, res) {
+        //let essaie1 = [saisons.findAll().then(saison => res.json(saison))];
+        let sais = await saisons_1.saisons.findAll();
+        let recettess = await recipe_1.recettes.findAll();
+        res.json({ saisons: [...sais], recettes: [...recettess] });
     }
     show(req, res) {
         recipe_1.recettes.findAll({ 'where': { id: req.params.id } }).then(recipes => res.json(recipes));

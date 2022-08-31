@@ -6,11 +6,12 @@ import { saisons } from "../models/saisons";
 
 export class RecipeController extends CrudController {
 
-    public read(req: Request, res: Response): void {
+    public async read(req: Request, res: Response) {
 
-        let essaie1 = [saisons.findAll().then(saison => res.json(saison))];
-        let recette = [recettes.findAll().then(recipes => res.json(recipes))];
-
+        //let essaie1 = [saisons.findAll().then(saison => res.json(saison))];
+        let sais = await saisons.findAll();
+        let recettess = await recettes.findAll();
+        res.json({ saisons: [...sais], recettes: [...recettess] }   )
 
     }
     public show(req: Request, res: Response): void {
