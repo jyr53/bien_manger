@@ -5,20 +5,22 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 require('dotenv').config();
 const express_1 = __importDefault(require("express"));
+var cors = require('cors')
 const constants_1 = require("./config/constants");
 const recipe_1 = require("./routes/recipe");
 const utilisateur_1 = require("./routes/utilisateur");
 const app = (0, express_1.default)();
-const alowedOrigins = ['http://localhost:4000'];
+const allowedOrigins = ['http://localhost:4000', '*'];
 const options = {
-    origin: alowedOrigins
+    origin: "*",
+    optionsSuccessStatus: 200
 };
 //app.use(path,(req,res,next));
 app.use(express_1.default.json());
 //app.use('/static',express.static(join))
 app.get("/", (req, res) => res.send("hello world salut bande de nase"));
 //route des recettes
-app.get("/recipe", recipe_1.router);
+app.get("/recipe", cors(options), recipe_1.router);
 app.get("/recipe/show/:id", recipe_1.router);
 app.post("/recipe/add", recipe_1.router);
 app.post("/recipe/up/:id", recipe_1.router);

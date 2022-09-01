@@ -3,6 +3,7 @@ import { Request, Response } from "express";
 import { CrudController } from "./CrudControler";
 import { recettes } from "../models/recipe";
 import { saisons } from "../models/saisons";
+import { images } from "../models/images";
 
 export class RecipeController extends CrudController {
 
@@ -11,7 +12,8 @@ export class RecipeController extends CrudController {
         //let essaie1 = [saisons.findAll().then(saison => res.json(saison))];
         let sais = await saisons.findAll();
         let recettess = await recettes.findAll();
-        res.json({ saisons: [...sais], recettes: [...recettess] }   )
+        let photos = await images.findAll();
+        res.json({ saisons: [...sais], recettes: [...recettess], photos: [...photos] })
 
     }
     public show(req: Request, res: Response): void {
