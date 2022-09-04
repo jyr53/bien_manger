@@ -19,11 +19,8 @@ ingredients_recettes.init({
         type: DataTypes.FLOAT,
         allowNull: false,
     },
-    Slug: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-    },
+
+
     ingredients_id: {
         type: DataTypes.INTEGER,
         allowNull: false,

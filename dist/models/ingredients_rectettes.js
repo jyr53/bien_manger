@@ -16,11 +16,6 @@ ingredients_recettes.init({
         type: sequelize_1.DataTypes.FLOAT,
         allowNull: false,
     },
-    Slug: {
-        type: sequelize_1.DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-    },
     ingredients_id: {
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
