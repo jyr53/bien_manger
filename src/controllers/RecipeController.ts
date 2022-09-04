@@ -12,13 +12,15 @@ export class RecipeController extends CrudController {
         let photos = await images.findAll();
         let sais = await saisons.findAll();
         let recettess = await recettes.findAll();
+
         res.json({ saisons: [...sais], recettes: [...recettess], images: [...photos], });
 
     }
     public async show(req: Request, res: Response) {
-        let recette = await recettes.findAll({ 'where': { id: req.params.id } });
+        let photos = await images.findAll({ 'where': { id: req.params.id } });
         let etape = await etapes.findAll({ 'where': { recette_id: req.params.id } });
-        res.json({ recette: [...recette], etape: [...etape] });
+        let recette = await recettes.findAll({ 'where': { id: req.params.id } });
+        res.json({ recettes: [...recette], etape: [...etape], images: [...photos], });
 
     }
     public create(req: Request, res: Response): void {
