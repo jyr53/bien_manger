@@ -14,12 +14,12 @@ recettes.init({
     },
     Name: {
         type: sequelize_1.DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         unique: true,
     },
     Slug: {
         type: sequelize_1.DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         unique: true,
     },
     description: {
@@ -31,19 +31,19 @@ recettes.init({
     },
     utilisateur_id: {
         type: sequelize_1.DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
     },
     plat_id: {
         type: sequelize_1.DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
     },
     saison_id: {
         type: sequelize_1.DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
     }
 }, {
     sequelize: database_1.sequelize,
-    timestamps: true,
+    timestamps: false,
     createdAt: 'created_at',
     updatedAt: 'updated_at',
 });
