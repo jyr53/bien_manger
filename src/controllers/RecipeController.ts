@@ -5,6 +5,8 @@ import { recettes } from "../models/recipe";
 import { saisons } from "../models/saisons";
 import { images } from "../models/images";
 import { etapes } from "../models/etapes";
+import { ingredients } from "../models/ingredients";
+import { ingredients_recettes } from "../models/ingredients_rectettes";
 
 export class RecipeController extends CrudController {
 
@@ -20,7 +22,9 @@ export class RecipeController extends CrudController {
         let photos = await images.findAll({ 'where': { id: req.params.id } });
         let etape = await etapes.findAll({ 'where': { recette_id: req.params.id } });
         let recette = await recettes.findAll({ 'where': { id: req.params.id } });
-        res.json({ recettes: [...recette], etape: [...etape], images: [...photos], });
+        let ingreRecet=await ingredients_recettes.findAll({ 'where': { recette_id: req.params.id } });
+        let ingredient = await ingredients.findAll({ 'where': { ingredients_id: ingreRecet } });
+        res.json({ recettes: [...recette], etape: [...etape], images: [...photos],ingre_recet:[...ingreRecet],element:[...ingredient] });
 
     }
     public create(req: Request, res: Response): void {
