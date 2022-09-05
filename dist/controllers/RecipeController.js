@@ -8,14 +8,15 @@ const images_1 = require("../models/images");
 const etapes_1 = require("../models/etapes");
 const ingredients_1 = require("../models/ingredients");
 const ingredients_rectettes_1 = require("../models/ingredients_rectettes");
+const plats_1 = require("../models/plats");
 class RecipeController extends CrudControler_1.CrudController {
     async read(req, res) {
         let photos = await images_1.images.findAll();
         let sais = await saisons_1.saisons.findAll();
         let recettess = await recipe_1.recettes.findAll();
         let ingredient = await ingredients_1.ingredients.findAll();
-        console.log("tu y est");
-        res.json({ saisons: [...sais], recettes: [...recettess], images: [...photos], element: [...ingredient], });
+        let plat = await plats_1.plats.findAll();
+        res.json({ saisons: [...sais], recettes: [...recettess], images: [...photos], element: [...ingredient], plats: [...plat], });
     }
     async show(req, res) {
         let photos = await images_1.images.findAll({ 'where': { id: req.params.id } });

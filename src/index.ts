@@ -4,23 +4,25 @@ import express from "express";
 import { PORT } from "./config/constants";
 import { router } from "./routes/recipe";
 import { userRouter } from "./routes/utilisateur";
+let bodyParser = require('body-parser');
+
+
 const app = express();
 app.use(express.json());
-let bodyParser = require('body-parser');
-const alowedOrigins = ["*"];
+
+var jsonParser = bodyParser.json()
 
 const options: cors.CorsOptions = {
     origin: "*"
 };
 //app.use(path,(req,res,next));
 app.use(cors(options));
-app.use(express.json());
 //app.use('/static',express.static(join))
 app.get("/", (req, res) => res.send("hello world salut bande de nase"));
 //route des recettes
 app.get("/recipe", router);
 app.get("/recipe/show/:id", router);
-app.post("/recipe/add", router);
+app.post("/recipe/add", jsonParser, router);
 app.post("/recipe/up/:id", router);
 app.post("/recipe/del/:id", router);
 

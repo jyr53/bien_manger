@@ -7,6 +7,7 @@ import { images } from "../models/images";
 import { etapes } from "../models/etapes";
 import { ingredients } from "../models/ingredients";
 import { ingredients_recettes } from "../models/ingredients_rectettes";
+import { plats } from "../models/plats";
 
 export class RecipeController extends CrudController {
 
@@ -15,8 +16,8 @@ export class RecipeController extends CrudController {
         let sais = await saisons.findAll();
         let recettess = await recettes.findAll();
         let ingredient = await ingredients.findAll();
-        console.log("tu y est");
-        res.json({ saisons: [...sais], recettes: [...recettess], images: [...photos], element: [...ingredient], });
+        let plat = await plats.findAll();
+        res.json({ saisons: [...sais], recettes: [...recettess], images: [...photos], element: [...ingredient], plats: [...plat] ,});
 
     }
     public async show(req: Request, res: Response) {

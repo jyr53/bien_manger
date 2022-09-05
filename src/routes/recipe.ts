@@ -5,6 +5,8 @@ import { request } from "http";
 import { RecipeController } from "../controllers/RecipeController";
 //import { SaisonController } from "../controllers/SaisonController";
 
+let bodyParser = require('body-parser');
+var jsonParser = bodyParser.json()
 
 const recipeController = new RecipeController();
 export const router = express.Router({
@@ -13,6 +15,6 @@ export const router = express.Router({
 
 router.get("/recipe", (req: Request, res: Response) => recipeController.read(req, res));
 router.get("/recipe/show/:id", (req: Request, res: Response) => recipeController.show(req, res));
-router.post("/recipe/add", (req: Request, res: Response) => recipeController.create(req, res));
+router.post("/recipe/add", jsonParser, (req: Request, res: Response) => recipeController.create(req, res));
 router.post("/recipe/up/:id", (req: Request, res: Response) => recipeController.update(req, res));
 router.post("/recipe/del/:id", (req: Request, res: Response) => recipeController.delete(req, res));
