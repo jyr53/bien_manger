@@ -3,14 +3,17 @@ import cors from "cors";
 import express from "express";
 import { PORT } from "./config/constants";
 import { router } from "./routes/recipe";
-import { userRouter } from "./routes/utilisateur"
+import { userRouter } from "./routes/utilisateur";
 const app = express();
-const alowedOrigins = ['http://localhost:4000'];
+app.use(express.json());
+let bodyParser = require('body-parser');
+const alowedOrigins = ["*"];
 
 const options: cors.CorsOptions = {
-    origin: alowedOrigins
+    origin: "*"
 };
 //app.use(path,(req,res,next));
+app.use(cors(options));
 app.use(express.json());
 //app.use('/static',express.static(join))
 app.get("/", (req, res) => res.send("hello world salut bande de nase"));

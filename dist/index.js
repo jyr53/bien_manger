@@ -4,16 +4,20 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 require('dotenv').config();
+const cors_1 = __importDefault(require("cors"));
 const express_1 = __importDefault(require("express"));
 const constants_1 = require("./config/constants");
 const recipe_1 = require("./routes/recipe");
 const utilisateur_1 = require("./routes/utilisateur");
 const app = (0, express_1.default)();
-const alowedOrigins = ['http://localhost:4000'];
+app.use(express_1.default.json());
+let bodyParser = require('body-parser');
+const alowedOrigins = ["*"];
 const options = {
-    origin: alowedOrigins
+    origin: "*"
 };
 //app.use(path,(req,res,next));
+app.use((0, cors_1.default)(options));
 app.use(express_1.default.json());
 //app.use('/static',express.static(join))
 app.get("/", (req, res) => res.send("hello world salut bande de nase"));

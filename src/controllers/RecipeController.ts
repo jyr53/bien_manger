@@ -15,6 +15,7 @@ export class RecipeController extends CrudController {
         let sais = await saisons.findAll();
         let recettess = await recettes.findAll();
         let ingredient = await ingredients.findAll();
+        console.log("tu y est");
         res.json({ saisons: [...sais], recettes: [...recettess], images: [...photos], element: [...ingredient], });
 
     }
@@ -27,6 +28,8 @@ export class RecipeController extends CrudController {
 
     }
     public create(req: Request, res: Response): void {
+        console.log('POUOPUOUPOUPOUPOUPOUPOUPOUO    ');
+        console.log(req.body);
         recettes.create(req.body).then(recipes => res.json(recipes));
         res.json("ok");
     }
