@@ -8,12 +8,10 @@ class IngredientsController extends CrudControler_1.CrudController {
         ingredients_1.ingredients.findAll().then(etapes => res.json(etapes));
     }
     create(req, res) {
-        ingredients_1.ingredients.create(req.body).then(etape => res.json(etape));
-        console.log(req.body);
-        res.json("ok");
+        ingredients_1.ingredients.create(req.body).then(ingredient => res.json(ingredient));
     }
     update(req, res) {
-        ingredients_1.ingredients.update(req.body, { 'where': { id: req.params.id } }).then(etape => res.json(etape));
+        ingredients_1.ingredients.update(req.body, { 'where': { id: req.params.id } }).then(ingredient => res.json(ingredient));
         res.json("ok");
     }
     delete(req, res) {

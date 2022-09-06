@@ -9,6 +9,7 @@ const express_1 = __importDefault(require("express"));
 const constants_1 = require("./config/constants");
 const recipe_1 = require("./routes/recipe");
 const utilisateur_1 = require("./routes/utilisateur");
+const ingredient_1 = require("./routes/ingredient");
 let bodyParser = require('body-parser');
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
@@ -26,6 +27,8 @@ app.get("/recipe/show/:id", recipe_1.router);
 app.post("/recipe/add", jsonParser, recipe_1.router);
 app.post("/recipe/up/:id", recipe_1.router);
 app.post("/recipe/del/:id", recipe_1.router);
+//routes ingredients
+app.post("/ingredient/add", jsonParser, ingredient_1.ingredientRouter);
 //routes d'utilisateur
 app.get("/user", utilisateur_1.userRouter);
 app.get("/user/show/:id", utilisateur_1.userRouter);

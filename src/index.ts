@@ -4,6 +4,7 @@ import express from "express";
 import { PORT } from "./config/constants";
 import { router } from "./routes/recipe";
 import { userRouter } from "./routes/utilisateur";
+import { ingredientRouter } from "./routes/ingredient";
 let bodyParser = require('body-parser');
 
 
@@ -25,6 +26,9 @@ app.get("/recipe/show/:id", router);
 app.post("/recipe/add", jsonParser, router);
 app.post("/recipe/up/:id", router);
 app.post("/recipe/del/:id", router);
+
+//routes ingredients
+app.post("/ingredient/add", jsonParser, ingredientRouter)
 
 //routes d'utilisateur
 app.get("/user", userRouter);

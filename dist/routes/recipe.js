@@ -6,7 +6,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.router = void 0;
 const express_1 = __importDefault(require("express"));
 const RecipeController_1 = require("../controllers/RecipeController");
-//import { SaisonController } from "../controllers/SaisonController";
 let bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 const recipeController = new RecipeController_1.RecipeController();
