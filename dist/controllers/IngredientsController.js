@@ -5,7 +5,7 @@ const CrudControler_1 = require("./CrudControler");
 const ingredients_1 = require("../models/ingredients");
 class IngredientsController extends CrudControler_1.CrudController {
     read(req, res) {
-        ingredients_1.ingredients.findAll().then(etapes => res.json(etapes));
+        ingredients_1.ingredients.findAll().then(ingredient => res.json(ingredient));
     }
     create(req, res) {
         ingredients_1.ingredients.create(req.body).then(ingredient => res.json(ingredient));
