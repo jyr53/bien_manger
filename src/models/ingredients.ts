@@ -5,7 +5,7 @@ import { sequelize } from "../config/database";
 export class ingredients extends Model {
     public id!: number;
     public Name!: string;
-    public unité!:string;
+    public unit!: string;
 
 }
 ingredients.init({
@@ -19,11 +19,11 @@ ingredients.init({
         allowNull: false,
         unique: true,
     },
-    unité: {
+    unit: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
-    }   
+    }
 },
     {
         sequelize,
