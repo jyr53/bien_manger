@@ -17,7 +17,7 @@ export class RecipeController extends CrudController {
         let recettess = await recettes.findAll();
         let ingredient = await ingredients.findAll();
         let plat = await plats.findAll();
-        res.json({ saisons: [...sais], recettes: [...recettess], images: [...photos], element: [...ingredient], plats: [...plat] ,});
+        res.json({ saisons: [...sais], recettes: [...recettess], images: [...photos], element: [...ingredient], plats: [...plat], });
 
     }
     public async show(req: Request, res: Response) {
@@ -29,10 +29,8 @@ export class RecipeController extends CrudController {
 
     }
     public create(req: Request, res: Response): void {
-        console.log('POUOPUOUPOUPOUPOUPOUPOUPOUO    ');
-        console.log(req.body);
         recettes.create(req.body).then(recipes => res.json(recipes));
-        res.json("ok");
+        /*res.json("ok");*/
     }
     public update(req: Request, res: Response): void {
         recettes.update(req.body, { 'where': { id: req.params.id } }).then(recipes => res.json(recipes));

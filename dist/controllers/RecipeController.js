@@ -26,10 +26,8 @@ class RecipeController extends CrudControler_1.CrudController {
         res.json({ recettes: [...recette], etape: [...etape], images: [...photos], ingre_recet: [...ingreRecet], });
     }
     create(req, res) {
-        console.log('POUOPUOUPOUPOUPOUPOUPOUPOUO    ');
-        console.log(req.body);
         recipe_1.recettes.create(req.body).then(recipes => res.json(recipes));
-        res.json("ok");
+        /*res.json("ok");*/
     }
     update(req, res) {
         recipe_1.recettes.update(req.body, { 'where': { id: req.params.id } }).then(recipes => res.json(recipes));
