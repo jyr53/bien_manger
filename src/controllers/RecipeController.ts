@@ -5,7 +5,7 @@ import { recettes } from "../models/recipe";
 import { saisons } from "../models/saisons";
 import { etapes } from "../models/etapes";
 import { ingredients } from "../models/ingredients";
-import { ingredients_recettes } from "../models/ingredients_rectettes";
+import { ingredients_recettes } from "../models/ingredients_recettes";
 import { plats } from "../models/plats";
 
 export class RecipeController extends CrudController {

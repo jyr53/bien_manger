@@ -17,7 +17,7 @@ ingredients_recettes.init({
     },
     quantity: {
         type: DataTypes.FLOAT,
-        allowNull: false,
+        allowNull: true,
     },
 
 
