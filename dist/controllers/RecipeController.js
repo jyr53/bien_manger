@@ -6,7 +6,7 @@ const recipe_1 = require("../models/recipe");
 const saisons_1 = require("../models/saisons");
 const etapes_1 = require("../models/etapes");
 const ingredients_1 = require("../models/ingredients");
-const ingredients_rectettes_1 = require("../models/ingredients_rectettes");
+const ingredients_recettes_1 = require("../models/ingredients_recettes");
 const plats_1 = require("../models/plats");
 class RecipeController extends CrudControler_1.CrudController {
     async read(req, res) {
@@ -19,7 +19,7 @@ class RecipeController extends CrudControler_1.CrudController {
     async show(req, res) {
         let etape = await etapes_1.etapes.findAll({ 'where': { recette_id: req.params.id } });
         let recette = await recipe_1.recettes.findAll({ 'where': { id: req.params.id } });
-        let ingreRecet = await ingredients_rectettes_1.ingredients_recettes.findAll({ 'where': { recettes_id: req.params.id } });
+        let ingreRecet = await ingredients_recettes_1.ingredients_recettes.findAll({ 'where': { recettes_id: req.params.id } });
         res.json({ recettes: [...recette], etape: [...etape], ingre_recet: [...ingreRecet], });
     }
     create(req, res) {
