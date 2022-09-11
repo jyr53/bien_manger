@@ -48,7 +48,6 @@ ingredients_recettes.init({
     }
 
 );
-//recettes.belongsToMany(ingredients, { through: ingredients_recettes ,foreignKey: "recettes_id" });
-//ingredients.belongsToMany(recettes, { through: ingredients_recettes,foreignKey: "ingredients_id"});
-//    *
+
+
 

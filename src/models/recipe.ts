@@ -2,7 +2,7 @@ import { Model, DataTypes } from 'sequelize';
 import { sequelize } from "../config/database";
 import { saisons } from './saisons';
 import { plats } from './plats';
-import { ingredients_recettes } from './ingredients_rectettes';
+import { ingredients_recettes } from './ingredients_recettes';
 import { ingredients } from './ingredients';
 
 export class recettes extends Model {
@@ -74,6 +74,6 @@ recettes.belongsTo(plats, { foreignKey: "plat_id" });
 plats.hasOne(recettes, { foreignKey: "plat_id" });
 saisons.hasOne(recettes, { foreignKey: "saison_id" });
 
-recettes.belongsToMany(ingredients, { through: ingredients_recettes, foreignKey: "ingredients_id" });
-//ingredients.belongsToMany(recettes, { through: ingredients_recettes, foreignKey: "recettes_id" });
+recettes.belongsToMany(ingredients, { through: ingredients_recettes, foreignKey: "recettes_id" });
+ingredients.belongsToMany(recettes, { through: ingredients_recettes, foreignKey: "ingredients_id" });
 

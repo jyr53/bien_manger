@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { CrudController } from "./CrudControler";
 import { ingredients_recettes } from "../models/ingredients_recettes";
 
+
 export class Ingredients_recettesController extends CrudController {
 
     public read(req: Request, res: Response): void {
