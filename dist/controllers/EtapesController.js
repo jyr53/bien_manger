@@ -9,7 +9,6 @@ class EtapesController extends CrudControler_1.CrudController {
     }
     create(req, res) {
         etapes_1.etapes.create(req.body).then(etape => res.json(etape));
-        console.log(req.body);
         res.json("ok");
     }
     update(req, res) {

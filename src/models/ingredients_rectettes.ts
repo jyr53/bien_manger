@@ -1,5 +1,7 @@
 import { Model, DataTypes } from 'sequelize';
 import { sequelize } from "../config/database";
+import { recettes } from "./recipe";
+import { ingredients } from "./ingredients";
 
 export class ingredients_recettes extends Model {
     public id!: number;
@@ -24,10 +26,18 @@ ingredients_recettes.init({
     ingredients_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        references: {
+            model: ingredients,
+            key: "id",
+        }
     },
     recettes_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        references: {
+            model: recettes,
+            key: "id",
+        }
     }
 },
     {
@@ -38,3 +48,7 @@ ingredients_recettes.init({
     }
 
 );
+//recettes.belongsToMany(ingredients, { through: ingredients_recettes ,foreignKey: "recettes_id" });
+//ingredients.belongsToMany(recettes, { through: ingredients_recettes,foreignKey: "ingredients_id"});
+//    *
+

@@ -1,27 +1,20 @@
 import { Model, DataTypes } from 'sequelize';
 import { sequelize } from "../config/database";
-import { recettes } from "./recipe";
-import { ingredients_recettes } from "./ingredients_rectettes";
+import { recettes } from './recipe';
+ 
 
-
-export class ingredients extends Model {
+export class plats extends Model {
     public id!: number;
-    public Name!: string;
-    public unité!: string;
+    public menu!: string;
 
 }
-ingredients.init({
+plats.init({
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
     },
-    Name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-    },
-    unité: {
+    menu: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,

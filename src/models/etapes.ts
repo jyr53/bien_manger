@@ -1,5 +1,6 @@
 import { Model, DataTypes } from 'sequelize';
 import { sequelize } from "../config/database";
+import { recettes } from './recipe';
 
 export class etapes extends Model {
     public id!: number;
@@ -36,3 +37,5 @@ etapes.init({
     }
 
 );
+etapes.belongsTo(recettes, { foreignKey: "recette_id" });
+recettes.hasMany(etapes,{foreignKey: "recette_id" });
