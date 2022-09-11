@@ -4,11 +4,9 @@ exports.RecipeController = void 0;
 const CrudControler_1 = require("./CrudControler");
 const recipe_1 = require("../models/recipe");
 const saisons_1 = require("../models/saisons");
-const images_1 = require("../models/images");
 const ingredients_1 = require("../models/ingredients");
 class RecipeController extends CrudControler_1.CrudController {
     async read(req, res) {
-        let photos = await images_1.images.findAll();
         let sais = await saisons_1.saisons.findAll();
         let recettess = await recipe_1.recettes.findAll();
         let ingredient = await ingredients_1.ingredients.findAll();
@@ -28,7 +26,6 @@ class RecipeController extends CrudControler_1.CrudController {
     }
     create(req, res) {
         recipe_1.recettes.create(req.body).then(recipes => res.json(recipes));
-        res.json("ok");
     }
     update(req, res) {
         recipe_1.recettes.update(req.body, { 'where': { id: req.params.id } }).then(recipes => res.json(recipes));

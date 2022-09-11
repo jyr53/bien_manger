@@ -7,7 +7,11 @@ import { ingredients_recettes } from "./ingredients_rectettes";
 export class ingredients extends Model {
     public id!: number;
     public Name!: string;
+<<<<<<< HEAD
     public unité!: string;
+=======
+    public unit!: string;
+>>>>>>> d5234b34554868afec09acddde7c76d37a4490fb
 
 }
 ingredients.init({
@@ -21,7 +25,7 @@ ingredients.init({
         allowNull: false,
         unique: true,
     },
-    unité: {
+    unit: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,

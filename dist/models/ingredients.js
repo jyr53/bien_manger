@@ -17,7 +17,7 @@ ingredients.init({
         allowNull: false,
         unique: true,
     },
-    unité: {
+    unit: {
         type: sequelize_1.DataTypes.STRING,
         allowNull: false,
         unique: true,

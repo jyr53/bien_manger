@@ -1,7 +1,11 @@
 import { Model, DataTypes } from 'sequelize';
 import { sequelize } from "../config/database";
+<<<<<<< HEAD
 import { recettes } from './recipe';
  
+=======
+
+>>>>>>> d5234b34554868afec09acddde7c76d37a4490fb
 
 export class plats extends Model {
     public id!: number;
@@ -25,4 +29,8 @@ plats.init({
         timestamps: false,
     }
 
+<<<<<<< HEAD
 );
+=======
+);
+>>>>>>> d5234b34554868afec09acddde7c76d37a4490fb
