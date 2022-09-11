@@ -28,9 +28,9 @@ export class RecipeController extends CrudController {
 
     }
     public create(req: Request, res: Response): void {
-        console.log('POUOPUOUPOUPOUPOUPOUPOUPOUO    ');
+     /*   console.log('POUOPUOUPOUPOUPOUPOUPOUPOUO    ');
         console.log(req.body);
-        recettes.create(req.body).then(recipes => res.json(recipes));
+        recettes.create(req.body).then(recipes => res.json(recipes));*/
         res.json("ok");
     }
     public update(req: Request, res: Response): void {
