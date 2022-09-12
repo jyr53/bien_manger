@@ -40,7 +40,8 @@ app.get("/user/show/:id", userRouter);
 app.post("/user/add", userRouter);
 app.post("/user/up/:id", userRouter);
 app.post("/user/del/:id", userRouter);
-
+//routes etapes
+app.post("/etape/add",etape.etapeRouter);
 
 
 console.log('le token JWT:',generateToken());
