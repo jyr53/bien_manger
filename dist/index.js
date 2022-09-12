@@ -39,7 +39,7 @@ app.get("/user/show/:id", utilisateur_1.userRouter);
 app.post("/user/add", utilisateur_1.userRouter);
 app.post("/user/up/:id", utilisateur_1.userRouter);
 app.post("/user/del/:id", utilisateur_1.userRouter);
-console.log('le token JWT:', (0, jwt_1.generateToken)());
+/*console.log('le token JWT:', (0, jwt_1.generateToken)());*/
 app.listen(constants_1.PORT, () => {
     console.log("Server is listenning on port" + constants_1.PORT);
 });
