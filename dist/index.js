@@ -6,12 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 require('dotenv').config();
 const cors_1 = __importDefault(require("cors"));
 const express_1 = __importDefault(require("express"));
-const jwt_1 = require("./authenticate/jwt");
 const constants_1 = require("./config/constants");
 const recipe_1 = require("./routes/recipe");
 const utilisateur_1 = require("./routes/utilisateur");
 const ingredient_1 = require("./routes/ingredient");
 const ingredients_recettes_1 = require("./routes/ingredients_recettes");
+const etape_1 = require("./routes/etape");
 let bodyParser = require('body-parser');
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
@@ -39,8 +39,9 @@ app.get("/user/show/:id", utilisateur_1.userRouter);
 app.post("/user/add", utilisateur_1.userRouter);
 app.post("/user/up/:id", utilisateur_1.userRouter);
 app.post("/user/del/:id", utilisateur_1.userRouter);
-
-/*console.log('le token JWT:', (0, jwt_1.generateToken)());*/
+//routes etapes
+app.post("/etape/add", etape_1.etapeRouter);
+//console.log('le token JWT:',generateToken());
 app.listen(constants_1.PORT, () => {
     console.log("Server is listenning on port" + constants_1.PORT);
 });

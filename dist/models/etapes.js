@@ -18,11 +18,11 @@ etapes.init({
     },
     content: {
         type: sequelize_1.DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     recette_id: {
         type: sequelize_1.DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
     }
 }, {
     sequelize: database_1.sequelize,
