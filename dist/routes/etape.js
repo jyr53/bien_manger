@@ -13,7 +13,7 @@ exports.etapeRouter = express_1.default.Router({
     strict: true
 });
 exports.etapeRouter.get("/etape", (req, res) => etapesController.read(req, res));
-//router.get("/etape/show/:id", (req: Request, res: Response) => etapesController.show(req, res));
+exports.etapeRouter.get("/etape/show/:id", (req, res) => etapesController.show(req, res));
 exports.etapeRouter.post("/etape/add", jsonParser, (req, res) => etapesController.create(req, res));
 exports.etapeRouter.post("/etape/up/:id", (req, res) => etapesController.update(req, res));
 exports.etapeRouter.post("/etape/del/:id", (req, res) => etapesController.delete(req, res));

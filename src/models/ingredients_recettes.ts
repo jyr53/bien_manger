@@ -1,4 +1,4 @@
-import { Model, DataTypes } from 'sequelize';
+import { Model, DataTypes, TEXT } from 'sequelize';
 import { sequelize } from "../config/database";
 import { recettes } from "./recipe";
 import { ingredients } from "./ingredients";
@@ -18,7 +18,7 @@ ingredients_recettes.init({
         primaryKey: true,
     },
     quantity: {
-        type: DataTypes.FLOAT,
+        type: DataTypes.STRING,
         allowNull: true,
     },
 

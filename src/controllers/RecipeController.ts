@@ -7,12 +7,12 @@ import { images } from "../models/images";
 import { etapes } from "../models/etapes";
 import { plats } from "../models/plats";
 import { ingredients } from "../models/ingredients";
-import { ingredients_recettes } from "../models/ingredients_recettes";
+
 
 export class RecipeController extends CrudController {
 
     public async read(req: Request, res: Response) {
-        let photos = await images.findAll();
+     //   let photos = await images.findAll();
         let sais = await saisons.findAll();
         let recettess = await recettes.findAll();
         let ingredient = await ingredients.findAll();

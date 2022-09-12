@@ -8,9 +8,15 @@ class EtapesController extends CrudControler_1.CrudController {
         etapes_1.etapes.findAll().then(etapes => res.json(etapes));
     }
     create(req, res) {
-        etapes_1.etapes.create(req.body);
-        //.then(etape => res.json(etape));
-        res.json("ok");
+        etapes_1.etapes.create(req.body)
+            .then(etape => res.json(etape));
+        console.log(req.body);
+        //  res.json("ok");
+    }
+    show(req, res) {
+        etapes_1.etapes.findOne({ 'where': { id: req.params.id } })
+            .then(etape => res.json(etape));
+        //res.json("ok");
     }
     update(req, res) {
         etapes_1.etapes.update(req.body, { 'where': { id: req.params.id } }).then(etape => res.json(etape));

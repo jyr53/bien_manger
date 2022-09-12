@@ -23,6 +23,10 @@ etapes.init({
     recette_id: {
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: true,
+        references: {
+            model: recipe_1.recettes,
+            key: "id",
+        }
     }
 }, {
     sequelize: database_1.sequelize,

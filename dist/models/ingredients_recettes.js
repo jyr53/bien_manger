@@ -15,7 +15,7 @@ ingredients_recettes.init({
         primaryKey: true,
     },
     quantity: {
-        type: sequelize_1.DataTypes.FLOAT,
+        type: sequelize_1.DataTypes.STRING,
         allowNull: true,
     },
     ingredients_id: {

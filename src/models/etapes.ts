@@ -27,6 +27,10 @@ etapes.init({
     recette_id: {
         type: DataTypes.INTEGER,
         allowNull: true,
+        references: {
+            model: recettes,
+            key: "id",
+        }
     }
 },
     {
