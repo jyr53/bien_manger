@@ -7,10 +7,10 @@ export class EtapesController extends CrudController {
     public read(req: Request, res: Response): void {
         etapes.findAll().then(etapes => res.json(etapes));
     }
+
     public create(req: Request, res: Response): void {
-        etapes.create(req.body)
-            .then(etape => res.json(etape));
-        console.log(req.body);
+        etapes.create(req.body).then(etape => res.json(etape));
+       // console.log(req.body);
         //  res.json("ok");
 
     }
