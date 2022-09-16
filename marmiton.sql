@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mar. 30 août 2022 à 16:03
+-- Généré le : ven. 16 sep. 2022 à 13:50
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 8.1.2
 
@@ -44,7 +44,51 @@ INSERT INTO `etapes` (`id`, `number`, `content`, `recette_id`, `created_at`, `up
 (1, 1, 'laver les tomates et la salade', 1, NULL, NULL),
 (2, 2, 'faire une vinaigrette', 1, NULL, NULL),
 (3, 3, 'decouper les tomates et la mozzarella ciseler la salade', 1, NULL, NULL),
-(4, 4, ' dans une assiette sur le lit de salade\r\nintercaler les rondelles de tomates et de fromage\r\nmettre un peu de vinaigrette', 1, NULL, NULL);
+(4, 4, ' dans une assiette sur le lit de salade\r\nintercaler les rondelles de tomates et de fromage\r\nmettre un peu de vinaigrette', 1, NULL, NULL),
+(5, 1, 'faire cuire les oeufs  dur (10mins)', 2, NULL, NULL),
+(6, 2, 'ecaler les oeufs', 2, NULL, NULL),
+(7, 1, 'faire revenir le boeuf', 3, '2022-09-12 11:51:29', '2022-09-12 11:51:29'),
+(11, 2, 'ajoutez la garniture aromatique et muiller avec le vin', 3, '2022-09-12 12:26:15', '2022-09-12 12:26:15'),
+(12, 1, 'axrtabuiro   tor ', 4, '2022-09-13 10:07:23', '2022-09-13 10:07:23'),
+(13, 1, 'gheyejzjf', 34, '2022-09-13 11:52:57', '2022-09-13 11:52:57'),
+(14, 2, 'lsksjheyrio', 34, '2022-09-13 11:52:57', '2022-09-13 11:52:57'),
+(15, 3, 'dmleoprithnd', 34, '2022-09-13 11:52:57', '2022-09-13 11:52:57'),
+(16, 1, 'prechauffer le four', 35, '2022-09-13 11:56:41', '2022-09-13 11:56:41'),
+(17, 2, 'enrouler les pruneaux avec du lard ', 35, '2022-09-13 11:56:41', '2022-09-13 11:56:41'),
+(18, 3, 'maintenir avec un cure dent', 35, '2022-09-13 11:56:41', '2022-09-13 11:56:41'),
+(19, 1, 'melanger les ingredints', 36, '2022-09-13 12:04:52', '2022-09-13 12:04:52'),
+(20, 2, 'porter a ebulition le lait', 36, '2022-09-13 12:04:52', '2022-09-13 12:04:52'),
+(21, 3, 'ajouter au lait le melanger', 36, '2022-09-13 12:04:52', '2022-09-13 12:04:52'),
+(22, 4, 'faire cuire 5 minute a feu moyen', 36, '2022-09-13 12:04:52', '2022-09-13 12:04:52'),
+(23, 5, 'sevir tiede', 36, '2022-09-13 12:04:52', '2022-09-13 12:04:52'),
+(29, 1, 'vzrjtuirt', 38, '2022-09-13 12:27:21', '2022-09-13 12:27:21'),
+(31, 1, 'aller dans votre commerce de proximite', 39, '2022-09-13 12:31:32', '2022-09-13 12:31:32'),
+(32, 2, 'ouvrir la barquette', 39, '2022-09-13 12:31:32', '2022-09-13 12:31:32'),
+(33, 3, 'servir', 39, '2022-09-13 12:31:32', '2022-09-13 12:31:32'),
+(34, 1, 'eplucher les salsifix', 40, '2022-09-13 12:42:18', '2022-09-13 12:42:18'),
+(35, 2, 'les couper', 40, '2022-09-13 12:42:18', '2022-09-13 12:42:18'),
+(36, 3, 'cuire dans un blanc (melange de farine et d\'eau)', 40, '2022-09-13 12:42:18', '2022-09-13 12:42:18'),
+(37, 4, 'faire revenir avec du beurre ail et parsil', 40, '2022-09-13 12:42:18', '2022-09-13 12:42:18'),
+(38, 1, 'cuire la viande avec des carottes', 41, '2022-09-13 14:15:27', '2022-09-13 14:15:27'),
+(39, 2, 'ajouter des raisins sec', 41, '2022-09-13 14:15:27', '2022-09-13 14:15:27'),
+(40, 3, 'ajouter du riz', 41, '2022-09-13 14:15:27', '2022-09-13 14:15:27'),
+(43, 1, 'monder le oranges', 48, '2022-09-15 10:37:48', '2022-09-15 10:37:48'),
+(44, 2, ' coupez en rondelle', 48, '2022-09-15 10:37:49', '2022-09-15 10:37:49'),
+(45, 1, 'faire chauffer le four', 49, '2022-09-15 11:07:04', '2022-09-15 11:07:04'),
+(46, 3, 'eplucher les poires', 49, '2022-09-15 11:07:04', '2022-09-15 11:07:04'),
+(47, 2, 'faire une pate a tarte avec le beurre la farine le sucre et les oeufs reserver au frais', 49, '2022-09-15 11:07:04', '2022-09-15 11:07:04'),
+(48, 5, 'metrre les poires coupez en morceaux', 49, '2022-09-15 11:07:04', '2022-09-15 11:07:04'),
+(49, 4, 'ateler la pate et garnir un moule  avec la pate', 49, '2022-09-15 11:07:04', '2022-09-15 11:07:04'),
+(50, 6, 'cuire a four chaud 30mins', 49, '2022-09-15 11:07:04', '2022-09-15 11:07:04'),
+(51, 1, 'faire chauffer le four', 49, '2022-09-15 11:07:08', '2022-09-15 11:07:08'),
+(52, 2, 'faire une pate a tarte avec le beurre la farine le sucre et les oeufs reserver au frais', 49, '2022-09-15 11:07:08', '2022-09-15 11:07:08'),
+(53, 3, 'eplucher les poires', 49, '2022-09-15 11:07:08', '2022-09-15 11:07:08'),
+(54, 4, 'ateler la pate et garnir un moule  avec la pate', 49, '2022-09-15 11:07:08', '2022-09-15 11:07:08'),
+(55, 5, 'metrre les poires coupez en morceaux', 49, '2022-09-15 11:07:08', '2022-09-15 11:07:08'),
+(56, 6, 'cuire a four chaud 30mins', 49, '2022-09-15 11:07:08', '2022-09-15 11:07:08'),
+(61, 1, 'eplucher les legumes', 73, '2022-09-15 14:13:20', '2022-09-15 14:13:20'),
+(62, 2, 'couper les legumes', 73, '2022-09-15 14:13:20', '2022-09-15 14:13:20'),
+(63, 3, 'cuirre la soupe', 73, '2022-09-15 14:13:20', '2022-09-15 14:13:20');
 
 -- --------------------------------------------------------
 
@@ -77,6 +121,14 @@ CREATE TABLE `images` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Déchargement des données de la table `images`
+--
+
+INSERT INTO `images` (`id`, `url`, `alternate_text`, `recettes_id`, `created_at`, `updated_at`) VALUES
+(1, '.cours/marmiton/tomatesmozz.jpg', 'tomate mozzarela', 1, NULL, NULL),
+(2, './cours/marmiton/boeuf bou.jpg', 'boeuf bourguignon et ces pommes de terre', 3, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -86,14 +138,14 @@ CREATE TABLE `images` (
 CREATE TABLE `ingredients` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `Name` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `unité` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `unit` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `ingredients`
 --
 
-INSERT INTO `ingredients` (`id`, `Name`, `unité`) VALUES
+INSERT INTO `ingredients` (`id`, `Name`, `unit`) VALUES
 (1, 'carotte', 'kg'),
 (2, 'poireaux', 'kg'),
 (3, 'Pomme de terre', 'kg'),
@@ -110,7 +162,7 @@ INSERT INTO `ingredients` (`id`, `Name`, `unité`) VALUES
 (14, 'beurre', 'kg'),
 (15, 'lait', 'L'),
 (16, 'riz', 'kg'),
-(17, 'corgette', 'kg'),
+(17, 'courgette', 'kg'),
 (18, 'comcombre', 'piece'),
 (19, 'orange', 'kg'),
 (20, 'fraise', 'kg'),
@@ -122,7 +174,24 @@ INSERT INTO `ingredients` (`id`, `Name`, `unité`) VALUES
 (26, 'mozzarela', 'kg'),
 (27, 'huile', 'L'),
 (28, 'vinaigre', 'L'),
-(29, 'tomate', 'kg');
+(29, 'tomate', 'kg'),
+(30, 'courgette', 'kG'),
+(31, 'pate a tarte', 'unité'),
+(32, 'poulet', 'Kg'),
+(33, 'saumon fumée', 'Kg'),
+(34, 'ciboulet', 'botte'),
+(35, 'persil', 'botte'),
+(36, 'raisin sec', 'Kg'),
+(37, 'ortie', 'kg'),
+(38, 'taboule', ''),
+(39, 'ail', ''),
+(40, 'salsifix', ''),
+(41, 'raisin sec', ''),
+(42, 'cacahuete', 'Kg'),
+(43, 'poire', 'Kg'),
+(44, 'haricote blanc', 'Kg'),
+(45, 'gigot  d\'agneau', 'Kg'),
+(46, 'saucisse', 'Kg');
 
 -- --------------------------------------------------------
 
@@ -132,7 +201,7 @@ INSERT INTO `ingredients` (`id`, `Name`, `unité`) VALUES
 
 CREATE TABLE `ingredients_recettes` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `quantity` double(8,2) NOT NULL,
+  `quantity` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
   `ingredients_id` bigint(20) UNSIGNED NOT NULL,
   `recettes_id` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -144,9 +213,34 @@ CREATE TABLE `ingredients_recettes` (
 --
 
 INSERT INTO `ingredients_recettes` (`id`, `quantity`, `ingredients_id`, `recettes_id`, `created_at`, `updated_at`) VALUES
-(1, 1.00, 23, 1, '2022-07-28 07:49:42', NULL),
-(2, 0.50, 29, 1, NULL, NULL),
-(3, 0.30, 26, 1, NULL, NULL);
+(8, '1 piece', 23, 1, NULL, NULL),
+(9, '0.8 kg', 26, 1, NULL, NULL),
+(10, '1 kg', 29, 1, NULL, NULL),
+(11, 'PM', 27, 1, NULL, NULL),
+(12, 'PM', 28, 1, NULL, NULL),
+(13, '6 pieces', 8, 2, NULL, NULL),
+(14, '2 cuillére', 24, 2, NULL, NULL),
+(15, '0.5 L', 27, 2, NULL, NULL),
+(16, 'PM', 28, 2, NULL, NULL),
+(17, 'PM', 5, 2, NULL, NULL),
+(18, 'pm', 6, 2, NULL, NULL),
+(19, 'NaN', 23, 3, '2022-09-12 12:50:44', '2022-09-12 12:50:44'),
+(20, '6 L', 26, 3, '2022-09-12 12:57:03', '2022-09-12 12:57:03'),
+(29, '0.5', 14, 38, '2022-09-13 12:27:21', '2022-09-13 12:27:21'),
+(30, '00.5', 9, 38, '2022-09-13 12:27:21', '2022-09-13 12:27:21'),
+(31, '5', 8, 38, '2022-09-13 12:27:21', '2022-09-13 12:27:21'),
+(32, '0', 38, 39, '2022-09-13 12:31:32', '2022-09-13 12:31:32'),
+(33, '0.2 Kg', 14, 40, '2022-09-13 12:42:18', '2022-09-13 12:42:18'),
+(34, '0.5 Kg', 7, 40, '2022-09-13 12:42:18', '2022-09-13 12:42:18'),
+(35, '1 botte', 35, 40, '2022-09-13 12:42:18', '2022-09-13 12:42:18'),
+(36, '1 tete', 39, 40, '2022-09-13 12:42:18', '2022-09-13 12:42:18'),
+(37, '1 Kg', 40, 40, '2022-09-13 12:42:18', '2022-09-13 12:42:18'),
+(38, '03 kg', 41, 41, '2022-09-13 14:15:27', '2022-09-13 14:15:27'),
+(39, '1 kg', 13, 41, '2022-09-13 14:15:27', '2022-09-13 14:15:27'),
+(40, '2 kg', 16, 41, '2022-09-13 14:15:27', '2022-09-13 14:15:27'),
+(41, '1', 2, 73, '2022-09-15 14:13:20', '2022-09-15 14:13:20'),
+(42, '5', 1, 73, '2022-09-15 14:13:20', '2022-09-15 14:13:20'),
+(43, '1', 3, 73, '2022-09-15 14:13:20', '2022-09-15 14:13:20');
 
 -- --------------------------------------------------------
 
@@ -246,11 +340,11 @@ CREATE TABLE `plats` (
 --
 
 INSERT INTO `plats` (`id`, `menu`) VALUES
-(1, 'Aperitis'),
-(2, 'Entre'),
-(3, 'Plats'),
-(4, 'Desserts'),
-(5, 'patisseries');
+(1, 'Apéritif'),
+(2, 'Entrée'),
+(3, 'Plat'),
+(4, 'Dessert'),
+(5, 'Pâtisserie');
 
 -- --------------------------------------------------------
 
@@ -280,8 +374,33 @@ INSERT INTO `recettes` (`id`, `Name`, `Slug`, `description`, `guest`, `created_a
 (2, 'oeufs mayonaise', 'oeufs mayonaise', 'oeufs dur mayonaise', 4, '2022-08-18 14:27:40', NULL, 2, 2, 1),
 (3, 'boeuf bourguignon', 'boeuf bourguignon', 'saute de boeuf au vin rouge  ', 6, '2022-08-18 16:28:55', NULL, 3, 4, 1),
 (4, 'gateau au chocolat', 'gateau chocolat', 'gateau moelleux au chocolat', 4, '2022-08-19 09:05:34', '2022-08-19 09:05:34', 3, 2, 1),
-(6, 'tarte au poires', 'tarte au poires', 'tarte amandine aux poires', 4, '2022-08-19 11:20:57', '2022-08-19 11:20:57', 3, 2, 1),
-(7, 'tarte a la tomate', 'tarte_tomate', 'tarte a la tomate avec de la moutarde', 4, '2022-08-19 12:43:21', '2022-08-19 12:43:21', 1, 1, 1);
+(6, 'tarte au poires', 'tarte au poires', 'tarte amandine aux poires', 4, '2022-08-19 11:20:57', '2022-08-19 11:20:57', 5, 4, 1),
+(7, 'tarte a la tomate', 'tarte_tomate', 'tarte a la tomate avec de la moutarde', 4, '2022-08-19 12:43:21', '2022-08-19 12:43:21', 1, 1, 1),
+(8, 'goulash', 'goulash', 'viande de boeuf cuit avec du paprika', 4, NULL, NULL, 3, 2, 1),
+(9, 'carotte rapées', 'carotte_rapees', 'carotte rapées de mamy', 8, '2022-07-28 07:49:42', NULL, 2, 1, 1),
+(10, 'salade nicoise', 'salade_nicoise trad', 'du vent dan les voiles', 8, NULL, NULL, 2, 3, 1),
+(11, 'artichaud vinaigrette', 'artichaud_froid', 'artichaud comme dans mon enfance froid vinaigrette', 8, NULL, NULL, 2, 3, 1),
+(12, 'terrine de sanglier', 'terrine_sanglier', 'terrine a l\'ancienne', 8, NULL, NULL, 1, 3, 1),
+(13, 'LOUKOUM', 'LOUKOUM', 'qrkczkuszemcnz', 4, NULL, NULL, 4, 2, 1),
+(14, 'terrine de foie de volaille', 'terrine_de_foie', 'terrine a l\'ancienne', 8, NULL, NULL, 1, 3, 1),
+(15, 'cote de porce', 'cote_de_porc', 'cote de porc sauce charcutiere', 8, NULL, NULL, 3, 2, 1),
+(16, 'crepe', 'crepe', 'crepe a base de farine', 2, NULL, NULL, 4, 3, 1),
+(17, 'lapin chasseur', 'lapin chasseur', 'lapin avec des champignons', 6, NULL, NULL, 3, 1, 1),
+(18, 'lapin chasseur', 'lapin chasseur', 'lapin avec des champignons', 6, NULL, NULL, 3, 1, 1),
+(19, 'kouglof', 'kouglof', 'patisserie russe ', 4, NULL, NULL, 5, 3, 1),
+(21, 'soupe d\'orties', 'soupe d\'orties', 'soupe de legume avec des ortie', 4, NULL, NULL, 2, 1, 1),
+(23, 'soupe de legume', 'soupe de legume', 'zktvnqqzityq', 2, NULL, NULL, 2, 3, 1),
+(26, 'rognons', 'rognons', 'acthbytvétéloypm', 8, NULL, NULL, 3, 4, 1),
+(27, 'rougai saucisse', 'rougai saucisse', 'Ca yen a etre bon', 2, NULL, NULL, 3, 2, 1),
+(28, 'tarte tatin', 'tarte tatin', 'tarte au pomme', 6, NULL, NULL, 5, 3, 1),
+(32, 'merguez', 'merguez', 'merguez au barbecue', 4, NULL, NULL, 3, 2, 1),
+(33, 'charlotte', 'charlotte', 'ahznctovya\'\'', 6, NULL, NULL, 4, 2, 1),
+(34, 'semoule au lait', 'semoule au lait', 'semoule au raisin et vanille', 8, NULL, NULL, 4, 3, 1),
+(35, 'pruneau au lard', 'pruneau au lard', 'prunoavec du lard fumée', 6, NULL, NULL, 1, 4, 1),
+(36, 'porige', 'porige', 'porige irlandais', 6, NULL, NULL, 4, 3, 1),
+(75, 'taboule', 'taboule', 'taboule libanait', 2, NULL, NULL, 2, 2, 1),
+(76, 'crudite', 'crudite', 'crudite', 2, NULL, NULL, 2, 1, 1),
+(77, 'casoulet', 'casoulet', 'casoulet toulousain', 2, NULL, NULL, 3, 4, 1);
 
 -- --------------------------------------------------------
 
@@ -299,7 +418,7 @@ CREATE TABLE `saisons` (
 --
 
 INSERT INTO `saisons` (`id`, `Name`) VALUES
-(1, 'e Pintemps'),
+(1, 'Printemps'),
 (2, ' Eté'),
 (3, ' Automne'),
 (4, ' Hiver');
@@ -431,7 +550,7 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `etapes`
 --
 ALTER TABLE `etapes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT pour la table `failed_jobs`
@@ -443,19 +562,19 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT pour la table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `ingredients`
 --
 ALTER TABLE `ingredients`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT pour la table `ingredients_recettes`
 --
 ALTER TABLE `ingredients_recettes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT pour la table `migrations`
@@ -485,7 +604,7 @@ ALTER TABLE `plats`
 -- AUTO_INCREMENT pour la table `recettes`
 --
 ALTER TABLE `recettes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- AUTO_INCREMENT pour la table `saisons`
@@ -504,12 +623,6 @@ ALTER TABLE `utilisateurs`
 --
 
 --
--- Contraintes pour la table `etapes`
---
-ALTER TABLE `etapes`
-  ADD CONSTRAINT `etapes_recette_id_foreign` FOREIGN KEY (`recette_id`) REFERENCES `recettes` (`id`);
-
---
 -- Contraintes pour la table `images`
 --
 ALTER TABLE `images`
@@ -519,8 +632,7 @@ ALTER TABLE `images`
 -- Contraintes pour la table `ingredients_recettes`
 --
 ALTER TABLE `ingredients_recettes`
-  ADD CONSTRAINT `ingredients_recettes_ingredients_id_foreign` FOREIGN KEY (`ingredients_id`) REFERENCES `ingredients` (`id`),
-  ADD CONSTRAINT `ingredients_recettes_recettes_id_foreign` FOREIGN KEY (`recettes_id`) REFERENCES `recettes` (`id`);
+  ADD CONSTRAINT `ingredients_recettes_ingredients_id_foreign` FOREIGN KEY (`ingredients_id`) REFERENCES `ingredients` (`id`);
 
 --
 -- Contraintes pour la table `recettes`
