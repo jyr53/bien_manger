@@ -9,10 +9,8 @@ export class Ingredients_recettesController extends CrudController {
         ingredients_recettes.findAll().then(content => res.json(content));
     }
     public create(req: Request, res: Response): void {
-        console.log(req);
-        /*  ingredients_recettes.create(req.body).then(content=> res.json(content));
-          console.log(req.body);*/
-        res.json("ok");
+        ingredients_recettes.create(req.body).then(content => res.json(content));
+
     }
     public update(req: Request, res: Response): void {
         ingredients_recettes.update(req.body, { 'where': { id: req.params.id } }).then(content => res.json(content));

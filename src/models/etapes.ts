@@ -22,11 +22,15 @@ etapes.init({
     },
     content: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     recette_id: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
+        references: {
+            model: recettes,
+            key: "id",
+        }
     }
 },
     {
@@ -37,5 +41,5 @@ etapes.init({
     }
 
 );
-etapes.belongsTo(recettes, { foreignKey: "recette_id" });
-recettes.hasMany(etapes,{foreignKey: "recette_id" });
+etapes.belongsTo(recettes, { foreignKey: "recette_id", onDelete: 'CASCADE' });
+recettes.hasMany(etapes, { foreignKey: "recette_id" });

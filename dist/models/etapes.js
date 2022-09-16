@@ -18,11 +18,15 @@ etapes.init({
     },
     content: {
         type: sequelize_1.DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     recette_id: {
         type: sequelize_1.DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
+        references: {
+            model: recipe_1.recettes,
+            key: "id",
+        }
     }
 }, {
     sequelize: database_1.sequelize,
@@ -30,5 +34,5 @@ etapes.init({
     createdAt: 'created_at',
     updatedAt: 'updated_at',
 });
-etapes.belongsTo(recipe_1.recettes, { foreignKey: "recette_id" });
+etapes.belongsTo(recipe_1.recettes, { foreignKey: "recette_id", onDelete: 'CASCADE' });
 recipe_1.recettes.hasMany(etapes, { foreignKey: "recette_id" });

@@ -74,6 +74,6 @@ recettes.belongsTo(plats, { foreignKey: "plat_id" });
 plats.hasOne(recettes, { foreignKey: "plat_id" });
 saisons.hasOne(recettes, { foreignKey: "saison_id" });
 
-recettes.belongsToMany(ingredients, { through: ingredients_recettes, foreignKey: "recettes_id" });
-ingredients.belongsToMany(recettes, { through: ingredients_recettes, foreignKey: "ingredients_id" });
+recettes.belongsToMany(ingredients, { through: ingredients_recettes, foreignKey: "recettes_id", onDelete: 'CASCADE' });
+ingredients.belongsToMany(recettes, { through: ingredients_recettes, foreignKey: "ingredients_id", onDelete: 'CASCADE' });
 

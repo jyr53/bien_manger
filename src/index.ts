@@ -1,12 +1,13 @@
 require('dotenv').config();
 import cors from "cors";
 import express from "express";
-import {generateToken }from "./authenticate/jwt";
+import { generateToken } from "./authenticate/jwt";
 import { PORT } from "./config/constants";
 import { router } from "./routes/recipe";
 import { userRouter } from "./routes/utilisateur";
 import { ingredientRouter } from "./routes/ingredient";
 import { ingredient_recetteRouter } from "./routes/ingredients_recettes";
+import { etapeRouter } from "./routes/etape";
 
 let bodyParser = require('body-parser');
 
@@ -40,10 +41,11 @@ app.get("/user/show/:id", userRouter);
 app.post("/user/add", userRouter);
 app.post("/user/up/:id", userRouter);
 app.post("/user/del/:id", userRouter);
+//routes etapes
+app.post("/etape/add", etapeRouter);
 
 
-
-console.log('le token JWT:',generateToken());
+//console.log('le token JWT:',generateToken());
 app.listen(PORT, () => {
     console.log("Server is listenning on port" + PORT);
 });
