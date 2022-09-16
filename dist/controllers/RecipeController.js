@@ -4,13 +4,12 @@ exports.RecipeController = void 0;
 const CrudControler_1 = require("./CrudControler");
 const recipe_1 = require("../models/recipe");
 const saisons_1 = require("../models/saisons");
-const images_1 = require("../models/images");
 const etapes_1 = require("../models/etapes");
 const plats_1 = require("../models/plats");
 const ingredients_1 = require("../models/ingredients");
 class RecipeController extends CrudControler_1.CrudController {
     async read(req, res) {
-        let photos = await images_1.images.findAll();
+        //let photos = await images.findAll();
         let sais = await saisons_1.saisons.findAll();
         let recettess = await recipe_1.recettes.findAll();
         let ingredient = await ingredients_1.ingredients.findAll();

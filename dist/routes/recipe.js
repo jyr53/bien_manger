@@ -7,7 +7,7 @@ exports.router = void 0;
 const express_1 = __importDefault(require("express"));
 const RecipeController_1 = require("../controllers/RecipeController");
 let bodyParser = require('body-parser');
-var jsonParser = bodyParser.json();
+let jsonParser = bodyParser.json();
 const recipeController = new RecipeController_1.RecipeController();
 exports.router = express_1.default.Router({
     strict: true
