@@ -63,5 +63,5 @@ recettes.belongsTo(saisons_1.saisons, { foreignKey: "saison_id" });
 recettes.belongsTo(plats_1.plats, { foreignKey: "plat_id" });
 plats_1.plats.hasOne(recettes, { foreignKey: "plat_id" });
 saisons_1.saisons.hasOne(recettes, { foreignKey: "saison_id" });
-recettes.belongsToMany(ingredients_1.ingredients, { through: ingredients_recettes_1.ingredients_recettes, foreignKey: "recettes_id" });
-ingredients_1.ingredients.belongsToMany(recettes, { through: ingredients_recettes_1.ingredients_recettes, foreignKey: "ingredients_id" });
+recettes.belongsToMany(ingredients_1.ingredients, { through: ingredients_recettes_1.ingredients_recettes, foreignKey: "recettes_id", onDelete: 'CASCADE' });
+ingredients_1.ingredients.belongsToMany(recettes, { through: ingredients_recettes_1.ingredients_recettes, foreignKey: "ingredients_id", onDelete: 'CASCADE' });

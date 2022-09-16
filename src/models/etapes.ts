@@ -41,5 +41,5 @@ etapes.init({
     }
 
 );
-etapes.belongsTo(recettes, { foreignKey: "recette_id" });
-recettes.hasMany(etapes,{foreignKey: "recette_id" });
+etapes.belongsTo(recettes, { foreignKey: "recette_id", onDelete: 'CASCADE' });
+recettes.hasMany(etapes, { foreignKey: "recette_id" });
